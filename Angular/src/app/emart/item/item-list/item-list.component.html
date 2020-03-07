@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-lg-4 my-2" *ngFor="let item of allItems">
+                    <div class="card">
+                        <div class="media-container">
+                            <img class="card-img" [src]="item.image" width="244.53" height="244.53" [alt]=""
+                                enctype='multipart/form-data'>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="text-left font-weight-bolder">Item:</p>
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="card-title"> {{ item.name }}</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="card-text">Price: {{item.price }}</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 align-right">
+                                        <button type="button" (click)="displayItemDetails(item.id)"
+                                            class="btn btn-primary">
+                                            <i class="fas fa-edit"></i>Product Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
